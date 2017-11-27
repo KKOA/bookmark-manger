@@ -23,4 +23,4 @@ DataMapper.setup(:default, "postgres://#{user}:#{pass}@#{host}/#{db}")
 DataMapper.finalize
 
 #Build new columns or tables added
-DataMapper.auto_upgrade
+DataMapper.auto_upgrade!
