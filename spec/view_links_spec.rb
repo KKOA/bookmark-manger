@@ -3,13 +3,14 @@ feature 'View links' do
     Link.create(url: 'http://www.makersacademy.com',title: 'Makers Academy')
     visit '/links'
     expect(page.status_code).to eq 200 #200 return if success
-    witin('ul#links')do
+    within('ul#links')do
       # search for text with ul with id links
       expect(page).to have_content('Makers Academy')
     end
   end
   scenario 'Create a new bookmark' do
-    visit '/links/new'
+    visit '/links'
+    click_link 'New Link'
     fill_in 'url',   with: 'http://www.zombo.com/'
     fill_in 'title', with: 'This is Zombocom'
     click_button 'Create link'
