@@ -1,5 +1,5 @@
 class Link
-  include DataMapper::Resource #Provides basic crud operations
+  include DataMapper::Resource # Provides basic crud operations
 
   # Set columns and data types
   property :id, Serial # Auto increment interger
