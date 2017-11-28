@@ -1,10 +1,9 @@
-class Link
+class Tag
   include DataMapper::Resource # Provides basic crud operations
 
   # Set columns and data types
   property :id, Serial # Auto increment interger
-  property :title, String
-  property :url, String
+  property :name, String
   has n, :linktags
-  has n, :tags, :through => :linktags
+  has n, :links, :through => :linktags
 end
