@@ -1,12 +1,16 @@
 <!-- in views/links/index.erb -->
 <h1> Links </h1>
 
-<a href='/links/new'> New Link </a>
-<ul id='links'>
-  <% @links.each do |link| %>
-    <li>
-      Title: <%= link.title %>
-      URL:   <%= link.url   %>
-    </li>
-  <% end %>
-</ul>
+<a href='/links/new' class='btn btn-default'> New Link </a>
+<% if @links.count.zero? %>
+  <p> No links avaliable </p>
+<% else %>
+  <ul id='links'>
+    <% @links.each do |link| %>
+      <li>
+        Title: <%= link.title %>
+        URL:   <%= link.url   %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

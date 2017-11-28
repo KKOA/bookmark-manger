@@ -1,12 +1,26 @@
 <form action="/links" method='POST'>
-  <label for='url'>
+  <div class='form-group'>
+    <label for='url'>
     Url
-  </label>
-  <input type="text" id='url' name='url'>
-  <label for='title'>
-    Title
-  </label>
-  <input type="text" id='title' name='title'>
-  <input type='submit' value='Create link'>
+    </label>
+    <input type="text" id='url' name='url' class="form-control">
+  </div>
+
+  <div class='form-group'>
+    <label for='title'>
+      Title
+    </label>
+    <input type="text" id='title' name='title' class="form-control">
+  </div>
+
+  <div class='form-group'>
+    <label for='tags'>
+      Tags:
+    </label>
+    <input type='text' id='tags' name='tags' class="form-control">
+  </div>
+  <div class='form-group'>
+    <input type='submit' value='Create link' class='btn btn-default'/>
+  </div>
 </form>
-<a href='/links'> View Links </a>
+<a href='/links' class='btn btn-default'> View Links </a>
