@@ -9,9 +9,10 @@ user = 'keith'
 pass = 'makersacademy'
 host = 'localhost'
 db = "bookmark_manager_#{ENV['RACK_ENV']}"
-
+localsource = "postgres://#{user}:#{pass}@#{host}/#{db}"
 # Set up database connection
-DataMapper.setup(:default, "postgres://#{user}:#{pass}@#{host}/#{db}")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || localsource)
+#see https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel
 
 # Validate structure and syntax is correct
 DataMapper.finalize
