@@ -3,6 +3,8 @@ require 'dm-postgres-adapter'
 
 # Require Models
 require_relative 'link'
+require_relative 'link_tag'
+require_relative 'tag'
 
 # Database credintials
 user = 'keith'
