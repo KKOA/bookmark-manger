@@ -7,9 +7,13 @@
 <% else %>
   <ul id='links'>
     <% @links.each do |link| %>
-      <li>
+      <li id="link<%= link.id %>">
         Title: <%= link.title %>
         URL:   <%= link.url   %>
+        Tags:
+        <% link.tags.each do |tag| %>
+          <%= tag.name %>
+        <% end  %>
       </li>
     <% end %>
   </ul>
