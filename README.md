@@ -4,7 +4,18 @@ As part of Week 4 project I was tasked with constructed a web app that stores we
 
 ## Screenshot
 
-![Bookmark Manger Homepage](https://github.com/KKOA/bookmark-manger/blob/master/ScreenShot.png)
+![Bookmark Manger Homepage Screen shot](https://github.com/KKOA/bookmark-manger/blob/master/ScreenShot.png)
+
+
+## Technologies Used
+- Capybara
+- Data Mapper
+- Database Cleaner
+- Postgres
+- Rspec
+- Ruby
+- Shotgun
+- Sinsatra
 
 ## Setup Application
 Install postgres database on your machine. Once finished install the database create three database as shown below.
