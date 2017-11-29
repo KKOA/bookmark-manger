@@ -1,0 +1,16 @@
+<!-- in views/links/index.erb -->
+<h1> Tags </h1>
+
+<a href='/tags/new' class='btn btn-default'>Add Tag</a>
+<a href='/links' class='btn btn-default'>View Links</a>
+<% if @tags.count.zero? %>
+  <p> No tags avaliable </p>
+<% else %>
+  <ul id='tags'>
+    <% @tags.each do |tag| %>
+      <li id="tag<%= tag.id %>">
+        Name: <%= tag.name %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
